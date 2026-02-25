@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - India Post</title>
+<link rel="stylesheet" href="about.css">
+</head>
+<body>
+<nav>
+<a href="index.html">Schemes</a>
+<a href="contact.html">Contact</a>
+<a href="about.html">About</a>
+</nav>
+<header>
+<h1 id="aboutTitle">About India Post</h1>
+</header>
+<main>
+<section class="about-content">
+<h2>Our Legacy</h2>
+<p>For more than 150 years, the Department of Posts (DoP) has been the backbone of the country's communication and has played a crucial role in India's socio-economic development. With over 1,50,000 post offices, it is the most widely distributed postal network in the world, touching the lives of Indian citizens everywhere.</p>
+<h2>Our Vision</h2>
+<p>India Post's products and services will be the customer's first choice.</p>
+<h2>Our Mission</h2>
+<ul>
+<li>To sustain its position as the largest postal network in the world touching the lives of every citizen in the country.</li>
+<li>To provide mail parcel, money transfer, banking, insurance, and retail services with speed and reliability.</li>
+<li>To provide services to the customers on a value-for-money basis.</li>
+<li>To ensure that the employees are proud to be its main strength and serve its customers with a human touch.</li>
+</ul>
+</section>
+</main>
+<script>
+window.onload = function() {
+let title = document.getElementById("aboutTitle");
+title.style.opacity = 0;
+let opacity = 0;
+let fadeIn = setInterval(function() {
+if (opacity >= 1) {
+clearInterval(fadeIn);
+}
+title.style.opacity = opacity;
+opacity += 0.05;
+}, 30);
+};
+</script>
+</body>
+</html>
