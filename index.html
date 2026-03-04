@@ -1,76 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>India Post - Investment Schemes</title>
-<link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Post - Investment Schemes</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<nav>
-<a href="index.html">Schemes</a>
-<a href="contact.html">Contact</a>
-<a href="about.html">About</a>
-<button onclick="toggleDarkMode()" id="darkModeBtn">Dark Mode</button>
-</nav>
-<header>
-<h1>India Post Investment Schemes</h1>
-<p>Secure your future with government-backed savings and competitive interest rates.</p>
-</header>
-<main>
-<section class="schemes">
-<div class="scheme-card">
-<h2>Public Provident Fund (PPF)</h2>
-<p>Interest Rate: 7.1% p.a.</p>
-<p>Tenure: 15 Years</p>
-<p>Tax Benefits: Under Section 80C</p>
-</div>
-<div class="scheme-card">
-<h2>Senior Citizens Savings Scheme (SCSS)</h2>
-<p>Interest Rate: 8.2% p.a.</p>
-<p>Tenure: 5 Years</p>
-<p>Tax Benefits: Under Section 80C</p>
-</div>
-<div class="scheme-card">
-<h2>Sukanya Samriddhi Account (SSA)</h2>
-<p>Interest Rate: 8.2% p.a.</p>
-<p>Tenure: 21 Years</p>
-<p>Tax Benefits: Under Section 80C</p>
-</div>
-<div class="scheme-card">
-<h2>Post Office Monthly Income Scheme (POMIS)</h2>
-<p>Interest Rate: 7.4% p.a.</p>
-<p>Tenure: 5 Years</p>
-<p>Tax Benefits: No tax benefit on investment</p>
-</div>
-</section>
-<div class="calculator">
-<h3>Estimate Your POMIS Monthly Income</h3>
-<input type="number" id="principal" placeholder="Enter Deposit Amount (₹)">
-<button onclick="calculateInterest()">Calculate</button>
-<p id="result"></p>
-</div>
-</main>
-<script>
-function calculateInterest() {
-let principal = document.getElementById("principal").value;
-if(principal > 0) {
-let monthlyIncome = (principal * 7.4) / 100 / 12;
-document.getElementById("result").innerText = "Estimated Monthly Income: ₹" + monthlyIncome.toFixed(2);
-} else {
-document.getElementById("result").innerText = "Please enter a valid deposit amount.";
-}
-}
+    <nav>
+        <a href="index.html">Schemes</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <button onclick="toggleDarkMode()" id="darkModeBtn">🌙 Dark Mode</button>
+    </nav>
 
-function toggleDarkMode() {
-document.body.classList.toggle("dark-mode");
-let btn = document.getElementById("darkModeBtn");
-if(document.body.classList.contains("dark-mode")) {
-btn.innerText = "Light Mode";
-} else {
-btn.innerText = "Dark Mode";
-}
-}
-</script>
+    <header class="animate-fade-in">
+        <h1>India Post Investment Schemes</h1>
+        <p>Secure your future with government-backed savings and competitive interest rates. Explore our modern investment portfolio.</p>
+    </header>
+
+    <main>
+        <section class="schemes">
+            <div class="scheme-card animate-fade-in delay-1">
+                <h2>Public Provident Fund (PPF)</h2>
+                <p><span>Interest Rate:</span> <strong>7.1% p.a.</strong></p>
+                <p><span>Tenure:</span> <strong>15 Years</strong></p>
+                <p><span>Tax Benefits:</span> <strong>Under Section 80C</strong></p>
+            </div>
+            
+            <div class="scheme-card animate-fade-in delay-2">
+                <h2>Senior Citizens Savings Scheme (SCSS)</h2>
+                <p><span>Interest Rate:</span> <strong>8.2% p.a.</strong></p>
+                <p><span>Tenure:</span> <strong>5 Years</strong></p>
+                <p><span>Tax Benefits:</span> <strong>Under Section 80C</strong></p>
+            </div>
+            
+            <div class="scheme-card animate-fade-in delay-3">
+                <h2>Sukanya Samriddhi Account (SSA)</h2>
+                <p><span>Interest Rate:</span> <strong>8.2% p.a.</strong></p>
+                <p><span>Tenure:</span> <strong>21 Years</strong></p>
+                <p><span>Tax Benefits:</span> <strong>Under Section 80C</strong></p>
+            </div>
+            
+            <div class="scheme-card animate-fade-in delay-3">
+                <h2>Post Office Monthly Income Scheme (POMIS)</h2>
+                <p><span>Interest Rate:</span> <strong>7.4% p.a.</strong></p>
+                <p><span>Tenure:</span> <strong>5 Years</strong></p>
+                <p><span>Tax Benefits:</span> <strong>No tax benefit</strong></p>
+            </div>
+        </section>
+
+        <div class="content-card calculator animate-fade-in delay-3">
+            <h3>Estimate Your POMIS Monthly Income</h3>
+            <div class="input-group">
+                <input type="number" id="principal" placeholder="Enter Deposit Amount (₹)" min="1000" step="1000">
+                <button onclick="calculateInterest()">Calculate</button>
+            </div>
+            <p id="result"></p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
