@@ -56,6 +56,15 @@ body.dark-mode {
   box-sizing: border-box;
 }
 
+#webgl-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-color);
